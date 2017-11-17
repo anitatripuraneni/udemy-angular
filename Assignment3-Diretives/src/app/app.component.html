@@ -1,0 +1,5 @@
+<p *ngIf="displayContent1">{{paragraph}}</p>
+<button class="btn btn-primary" (click)="displayContent()">Display details</button>
+<p *ngFor="let i of countArr" [ngStyle]="{backgroundColor: i >=5 ? getColor():'transparent'}" [ngClass]="{'white-text': i>=5}">{{i}}</p>
+
+
