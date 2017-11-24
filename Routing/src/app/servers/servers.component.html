@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-4">
+    <div class="list-group">
+      <a [routerLink]="['/servers',server.id]" [queryParams]="{allowEdit: server.id === 3 ? '1':'0'}" fragment="loading"
+        href="#"
+        class="list-group-item"
+        *ngFor="let server of servers">
+        {{ server.name }}
+      </a>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <button class="btn btn-primary" (click)="onReload()">Reload Page</button>
+    <!-- <app-edit-server></app-edit-server>
+    <hr>
+   <app-server></app-server>-->
+
+    <!--instead of adding directly child components tag in parent component(as above), we can add child components using routing technique with the help of nested routing as below
+    As per the below router outlet tag what ever the childern declared in servers router in app module those all childern components will be accessed here by using routing-->
+
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

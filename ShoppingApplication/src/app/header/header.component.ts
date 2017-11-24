@@ -7,11 +7,7 @@ import {Component, EventEmitter, OnInit, ViewEncapsulation, Output} from '@angul
   encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent implements OnInit {
-@Output('featureSelect') featureSelected = new EventEmitter<String>();
 
-  onSelect(feature: String) {
-  this.featureSelected.emit(feature);
-}
   constructor() { }
 
   ngOnInit() {
