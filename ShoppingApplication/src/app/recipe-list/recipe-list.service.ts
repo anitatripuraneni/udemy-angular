@@ -13,6 +13,10 @@ recipeschanged = new Subject<Recipe[]>();
     new Recipe('Second recipe', 'This is indian recipe', 'https://drop.ndtv.com/albums/COOKS/corngallery/' +
       'creolespicedcornthumb_640x480.jpg',[new Ingredient('Bun',3),new Ingredient('Fish',7)]) ];
 
+setRecipes(recipes: Recipe[]){
+  this.recipes = recipes;
+  this.recipeschanged.next(this.recipes.slice());
+}
  getRecipes(){
    return this.recipes.slice();//by using slice method we can return only copy of the array, not exactly the recipe object present in service class, so this helps to avoid directly access of recipe array from outside the service class.
  }

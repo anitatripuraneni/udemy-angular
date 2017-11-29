@@ -1,0 +1,54 @@
+installation of Angular js
+------------------------------
+
+step 1: install node JS
+
+Step 2 : check node JS version using in cmd/IDE(webstrom) using below command
+
+node -v
+version : 8.4.0
+
+step 3: install NPM(node package manager) 
+note: if we install node.js by default npm also will be installed on the system
+
+Step 4: check npm  version using in cmd/IDE(webstrom) using below command
+
+npm -v
+
+step 5 : install angular cli on the system from cmd/IDE
+command : npm install -g @angular/cli
+note : -g stands global , if we use this option , one time installation of angular will be enough or else each time for each workspace we need to install angular/cli.
+
+step 6:  check the version of angular/cli with below command
+command: ng -version
+
+step 7 : to create new angular project use the below command in the specific directory
+ng new <project name>
+
+step 8 : to run and deploy the angular project from project directory below command
+ng serve
+
+
+step 9 : to create new component the project.
+ng g component <component name>
+
+step 10 : to install bootstrap in to the project folder for nice css and styles
+command : npm install --save bootstrap
+
+
+step 11 : to skip creation of the spec/test file in a component.
+command : ng g c <componentname> --spec false
+
+step 12: to create component inside the component and not directly under app folder.
+command : ng g c <parentcomponent>/<componentname> --spec false
+
+step 13: if node-modules folder is missing in the project , we cannot run ng serve on that project so first we need to create node-modules folder in the project for that need to run below command in the project directory
+command : npm install
+
+
+step 14: To call the backend services we can use firebase which will generate dummy REST API for us along with database.
+to create our own project with DB  in the firebase visit to 
+http://firebase.google.com
+
+step 15: To implement authentication in Angular we can use firebase authentication called firebase with SDK, for this usage we need to install firebase in our project
+command: npm install --save firebase 
