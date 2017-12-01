@@ -87,4 +87,9 @@ this.router.navigate(['../'],{relativeTo: this.route});
   onDeleteIngredient(index: number){
     (<FormArray>this.reciepeForm.get('ingredients')).removeAt(index);
   }
+
+  getControls() {
+    return (<FormArray>this.reciepeForm.get('ingredients')).controls;
+  }
+
 }

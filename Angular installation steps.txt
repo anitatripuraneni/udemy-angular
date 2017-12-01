@@ -52,3 +52,42 @@ http://firebase.google.com
 
 step 15: To implement authentication in Angular we can use firebase authentication called firebase with SDK, for this usage we need to install firebase in our project
 command: npm install --save firebase 
+
+
+step 16: regarding compliation of angular project.
+
+compiling and coverting type script code to JS is taken care by cli.(Angular is not involved in this process)
+They what does the angular do?
+Actually angular compilies the our templates(html code) to java script
+on browser rendering the JS code is faster than rendering the DOM element, so the angular converts the templates to JS 
+
+
+There are 2 ways of compilation -->1) Just in time compilation(JIT) 2)Ahead of time compilation(AOT).
+
+1) Just in time compilation--> Steps followed during this type of compiliation are as below:
+developement-->production(when we run ng serve command the developed code is shipped to development server)-->App downloaded in  browser-->Angular parsed and compiles templates to javascript
+
+this is default compilation takes place in all angular projects.
+with this type of compilation along with developed code the compiler also will be shipped to browser to compile the templates to javascript so that the file size shipped to browser is of very huge.
+
+
+2)Ahead of time compilation--> Steps followed during this type of compiliation are as below:
+developement-->Angular parsed and compiles templates to javascript-->production(when we run with below command the parsed code is shipped to development server)-->App downloaded in  browser
+
+Advantages of this compilation are :
+
+*) faster startup of app in browser snice parsing and commpilation doesnt happen in browser
+*) Templates get checked during development
+*) smaller file size shipped to browser since unused features and compiler are stripped out 
+
+to acheive the AOT compilation below command to be used and also the same command can u used to build the production code.
+command: ng build -- prod --aot
+
+
+once the above command is ran on the angular project it will create new 'dist' folder in the project which consits of code which can be deployed on the production server.
+
+
+
+step 17: to install ngrx package in to our project, this ngrx will be used to add reducers to our project which holds the application state.
+
+command: npm install --save @ngrx/store
