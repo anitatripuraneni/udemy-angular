@@ -11,6 +11,7 @@ export class AuthInterceptor implements HttpInterceptor {
         console.log('Intercepted!', request);
         //const copiedRequest = request.clone({headers: request.headers.append('','')});
         const copiedRequest = request.clone({params: request.params.append('auth',this.authService.getToken())});
+        
         return next.handle(copiedRequest);
     }
 }
