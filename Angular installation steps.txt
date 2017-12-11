@@ -91,3 +91,39 @@ once the above command is ran on the angular project it will create new 'dist' f
 step 17: to install ngrx package in to our project, this ngrx will be used to add reducers to our project which holds the application state.
 
 command: npm install --save @ngrx/store
+
+step 18:
+unverisal rendering: https://github.com/angular/angular-cli/wiki/stories-universal-rendering
+from the above link we will get the steps how to integrate the angular unverisal in to exisiting angular cli applications
+
+unverisal rendering means the app runs on the browser and can be rendered on the server
+ to install platform server package from angular to our project.
+
+command: npm install --save-dev @angular/platform-server
+
+this  will download a special angular package which is required for server side rendering.
+
+default build is client side bundle in angualar:
+
+command: ng build --prod
+
+After doing all the necessary configuration changes/edits to the application we need to bundle all changes and build the server bundle in dist-server
+command: ng build --prod --app 1
+
+
+to install the express package(popular node js framework) on to our project.
+command: npm install --save express
+
+
+to install nguniversal express engine package , this is rendering engine for express project  which allows us  to render our template, javascript and angualar template to html which can be served in the end
+
+command: npm install --save @nguniversal/express-engine
+
+to install nguniversal module map ng factory loader package, this package which allows the server side to code here correctly handle all the modules in the project and correctly load them.
+
+command: npm install --save @nguniversal/module-map-ngfactory-loader
+
+
+to run the app on our own server(configured by us) use the below command:
+
+command: node server.js

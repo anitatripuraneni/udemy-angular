@@ -21,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId:'my-unversial-app'}),
     HttpModule,
     HttpClientModule,
     AppRoutingModule,
