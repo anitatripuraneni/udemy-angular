@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/Rx';
-import { Response } from '@angular/http/src/static_response';
+import { Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class ServerService {

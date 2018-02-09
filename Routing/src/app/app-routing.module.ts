@@ -39,7 +39,7 @@ const appRoutes: Routes=[
 @NgModule({
 imports: [
   //RouterModule.forRoot(appRoutes,{useHash: true})//useHash property is used in the url to identify or divide URL to 2 parts which is understandable in all browers and also on different web servers
-  //http://localhost:4200/#/servers-->the portion before # will be taken by webserver and after portion will be ignored
+  //http://localhost:4200/#/servers-->the portion before # will be taken by webserver and after portion will be ignored, the portion after # will be taken by angular for normal process.
   RouterModule.forRoot(appRoutes)
 ],
   exports: [RouterModule]

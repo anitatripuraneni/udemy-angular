@@ -8,6 +8,7 @@ export class AuthService {
   constructor(private router: Router) { }
   signUpUser(email: string, password: string) {
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(
+
       error => console.log(error)
     );
   }
@@ -18,6 +19,7 @@ export class AuthService {
         firebase.auth().currentUser.getIdToken().then(
           (token: string) => this.token = token
         )
+         
       }
     ).catch(
       error => console.log(error)

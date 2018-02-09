@@ -7,6 +7,9 @@
         *ngFor="let server of servers">
         {{ server.name }}
       </a>
+      <!--<a [routerLink]="['/servers',server.id]" This routerlink says to angular to go to base url-localhost:4200 and then append this router to the url
+      <a [routerLink]="['servers',server.id]" or <a [routerLink]="['./servers',server.id]"This routerlink says to angular to n append this router to the current url in the browser
+    <a [routerLink]="['../servers',server.id]" or <a [routerLink]="['../../servers',server.id]" This routerlink says to angular to go one head up or 2 head up of the current url and then append this router at that time-->
     </div>
   </div>
   <div class="col-xs-12 col-sm-4">

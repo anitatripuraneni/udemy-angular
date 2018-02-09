@@ -22,11 +22,12 @@ export class EditServerComponent implements OnInit, CanComponentDeactivate {
   ngOnInit() {
     const id = +this.route.snapshot.params['id'];//one type of fetching query params
 
+     //this is second type of fetching query params
     /*this.route.queryParams.subscribe(
       (queryParams: Params)=>{
 id = queryParams['id'];
       }
-    );*/ //this is second type of fetching query params
+    );*/
     this.server = this.serversService.getServer(id);
 
     this.serverName = this.server.name;

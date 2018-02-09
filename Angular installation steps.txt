@@ -15,6 +15,9 @@ Step 4: check npm  version using in cmd/IDE(webstrom) using below command
 
 npm -v
 
+To clean the npm cache  use below command:
+npm cache clean
+
 step 5 : install angular cli on the system from cmd/IDE
 command : npm install -g @angular/cli
 note : -g stands global , if we use this option , one time installation of angular will be enough or else each time for each workspace we need to install angular/cli.

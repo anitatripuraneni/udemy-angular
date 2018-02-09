@@ -16,8 +16,10 @@ app.engine('html',ngUniversal.ngExpressEngine({
     bootstrap:AppServerModuleNgFactory,
     providers:[
         provideModuleMap(LAZY_MODULE_MAP)
-    ]
-}));
+                      ]
+
+
+                    }));
 app.set('view engine','html');
 app.set('views','dist');
 app.get('/',angularRouter);
